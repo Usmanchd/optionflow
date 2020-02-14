@@ -1,25 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Table from './Table';
+import Sidebar from './Sidebar';
+import Loginform from './Loginform';
+import { Switch, Route } from 'react-router-dom';
+import Landingpage from './Landingpage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <div>
+        <Route exact path="/">
+          <Landingpage />
+        </Route>
+        <Route path="/login">
+          <Loginform />
+        </Route>
+        <Route path="/home">
+          <Switch>
+            <div className="main-homepage">
+              <div className="homepage-sidebar">
+                <Sidebar />
+              </div>
+              <div className="homepage-main">
+                <div className="homepage-header">Realtime Dashboard</div>
+                <div className="homepage-table">
+                  <Route exact path="/home">
+                    <Table />
+                  </Route>
+                  <Route path="/home/hello">
+                    <p>hello</p>
+                  </Route>
+                </div>
+              </div>
+            </div>
+          </Switch>
+        </Route>
+      </div>
+    </Switch>
   );
 }
 

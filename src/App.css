@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('./assests/HelveticaNeueLTCom-Md.ttf');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+.main-homepage {
+  position: relative;
+  font-family: 'Comfortaa', cursive;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  display: grid;
+  grid-template-columns: 0.1fr 3fr;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.homepage-main {
+  background-color: #11151e;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.homepage-sidebar {
+  background-color: #11161c;
+  height: 100%;
 }
+
+.homepage-header {
+  padding: 10px;
+  /* width: 100%; */
+  background-color: #272494;
+  /* height: 5vh; */
+}
+
+.homepage-table {
+  width: 70%;
+  margin: 20px;
+  color: white;
+}
+
+.table-header {
+  position: relative;
+  background-color: #1b1d2c;
+}
+
+tr {
+  /* display: flex;
+  width: 90%;
+  justify-content: space-between;
+  list-style: none; */
+  /* width: 100%; */
+  margin: 0;
+  padding: 100px;
+  font-size: 12px;
+  background-color: #151724;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.192);
+  /* width: 100%; */
+}
+
+table {
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+}
+th {
+  text-align: left;
+  background-color: #1b1d2c;
+
+  color: rgba(255, 255, 255, 0.445);
+}
+th,
+td {
+  padding: 10px;
+}
+.cross {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.icon-sidebar {
+  padding: 3px 0 15px 0;
+}
+
